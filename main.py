@@ -13,7 +13,7 @@ if not api_key and submit:
     st.write("🔑 No api keys! Please write down api keys in the blanks")
 if not Topics and submit:
     st.write("❗ No Topics! Please write down Topics in the blanks")
-if submit:
+if submit and api_key and Topics:
     with st.spinner("🔎 AI is accelerating processing......"):
         theme = generate_xiaohongshu(Topics,api_key)
         with st.expander("💡 The theme of xiaohongshu"):

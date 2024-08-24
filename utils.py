@@ -1,5 +1,3 @@
-from os import getenv
-
 from prompt_template import system_template_text,user_template_text
 from langchain.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
@@ -20,4 +18,3 @@ def generate_xiaohongshu(theme,openai_api_key):
         "theme":theme
     })
     return result
-generate_xiaohongshu("第五人格",getenv("OPENAI_API_KEY"))
